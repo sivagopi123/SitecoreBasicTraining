@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Aroma.Models.NavigationItem>
+
+<ol class="breadcrumb">
+    @foreach (var navItem in Model)
+    {
+        <li>
+            <a class="@navItem.ActiveFlagString"
+               href="@navItem.NavUrl">@navItem.NavTitle</a>
+        </li>
+    }
+
+</ol>

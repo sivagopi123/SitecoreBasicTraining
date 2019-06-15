@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Aroma.Models.NavigationItem>
+
+<div class="bg-primary side-widget">
+    <h4 class="text-uppercase">Other items you might like</h4>
+    <ul class="sidebar">
+        @foreach(var item in Model)
+        {
+            <li><a href="@item.NavUrl">@item.NavTitle</a></li>
+        }
+    </ul>
+</div>

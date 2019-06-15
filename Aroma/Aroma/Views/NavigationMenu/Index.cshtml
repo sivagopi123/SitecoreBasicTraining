@@ -1,0 +1,24 @@
+﻿@model Aroma.Models.NavigationMenu
+
+
+<h4><a href="@Model.NavUrl">@Model.NavTitle</a></h4>
+
+<div class="sidebar sidebar-static">
+    @RenderNavigation(Model.Children)
+</div>
+
+@helper RenderNavigation(IEnumerable<Aroma.Models.NavigationMenu> childItems)
+{ 
+    <ul class="nav nav-pills nav-stacked">
+        @foreach(var item in childItems)
+        {
+            <li class=@(item.Children != null ? "open" : "close")>
+                <a href="@item.NavUrl">@item.NavTitle</a>
+                @if(item.Children != null)
+                {
+                    @RenderNavigation(item.Children);
+                }
+            </li>
+        }
+    </ul>        
+}

@@ -1,0 +1,32 @@
+﻿
+@{
+                /**/
+
+                Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Html.Sitecore().Field("Title")</title>
+    <link rel="stylesheet" type="text/css" href="/Css/Aroma/vendor.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Css/Aroma/niteflight.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Css/Aroma/addition.css">
+    <link rel="stylesheet" type="text/css" href="/Css/Aroma/font-awesome.min.css">
+</head>
+<body>
+    <div id="main-container">
+        <div class="header-static">
+            @Html.Sitecore().Placeholder("header")
+        </div>
+        <div>
+            @Html.Sitecore().Placeholder("bodyContent")
+        </div>
+        <div class="container">
+            @Html.Sitecore().Placeholder("footer")
+        </div>
+    </div>
+</body>
+</html>

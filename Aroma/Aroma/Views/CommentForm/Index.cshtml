@@ -1,0 +1,20 @@
+﻿@model Aroma.Models.CommentForm
+@using (Html.BeginForm())
+{
+    <div  class="form-horizontal">
+        <h4>Comments Form</h4>
+    </div>
+    <div class="form-horizontal">
+        <div>
+            @Html.LabelFor(x => x.UserName)
+            @Html.TextBoxFor(x => x.UserName)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.UserComment)
+            @Html.TextBoxFor(x => x.UserComment)
+        </div>
+        <div class="form-group">
+            <input type="submit"  value="Submit" class="btn btn-default"/>
+        </div>
+    </div>
+}
